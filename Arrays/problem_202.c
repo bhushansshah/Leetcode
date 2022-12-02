@@ -1,0 +1,15 @@
+bool isHappy(int n){
+    int sum = 0;
+    while(n != 4){
+        sum = 0;
+        while(n){
+            sum += (n % 10) * (n % 10);
+            n = n / 10;
+        }
+        n = sum;
+        if(n == 1){
+            return true;
+        }
+    }
+    return false;
+}
